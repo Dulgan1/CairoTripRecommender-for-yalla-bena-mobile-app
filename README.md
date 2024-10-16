@@ -14,40 +14,23 @@
 
 
 ## 1. Project Overview
-The CairoTripRecommender repository is dedicated to building a machine learning-based recommendation system for personalized travel planning in Cairo. This project includes various stages, from data collection to model deployment, aimed at delivering real-time, tailored trip suggestions within the Yalla Bena app. Below is a detailed breakdown of the planned technical approach and tasks:
-
-1. **Data Collection & Preparation** 
-- **Data Sources**: Scrape and aggregate data from websites listing places, restaurants, and hotels in Cairo, ensuring only Cairo-specific information is retained. 
-**Data Processing**: 
-- - - Extract and clean data fields such as staying time, location, price, reviews, type (family, friends, solo), and keywords that reflect the interests of each location. 
-- - - Gather transportation data (public and private) to include price, distance, and stop times between places.  
-- **Output**: Cleaned and structured datasets ready for use in machine learning, encompassing both location details and transportation information.
-
-2. **Preference-Based Data Filtering** 
-- **Filtering Logic**: 
-- - - Apply user-defined preferences such as place type, interests, and price range to the data. 
-- - - Implement a ranking mechanism to prioritize locations with the highest reviews and closest proximity when multiple options share similar attributes (e.g., price). 
-- **Output**: A filtered, personalized dataset that prioritizes places most aligned with the user’s preferences.
-
-3. **Recommendation Model Development** 
-- **Model Selection**: Build a collaborative filtering or content-based model to generate personalized recommendations for places, activities, and dining options based on user preferences and behavior. 
-**Budget Constraints**: Incorporate budget allocation rules (e.g., 20% transportation, 40% activities, 20% restaurants, 20% hotels) to refine the recommendation process based on user-defined budgets. 
-- **Output**: A trained recommendation model capable of suggesting a cohesive itinerary, tailored to user interests and budgetary constraints.
-
-4. **Model Evaluation & Optimization** 
-- **Evaluation Metrics**: Utilize precision and recall to assess the relevancy and accuracy of recommendations. 
-- **Optimization**: Fine-tune the model based on evaluation results, making adjustments to improve personalized recommendations. 
-- **Output**: An optimized recommendation system that aligns closely with user preferences, providing relevant travel suggestions.
-
-5. **API Development for Front-End Integration** 
-- **API Design**: Create endpoints for real-time interaction between the recommendation engine and the Yalla Bena app, allowing users to receive dynamic itinerary suggestions. 
-- **Data Delivery**: Ensure the API supports features like activity and transportation recommendations, as well as budget-aware itinerary planning. 
-- **Output**: An API interface that seamlessly connects the recommendation engine to the app, providing users with a smooth, interactive travel planning experience.
-
-This project focuses on building a reliable, responsive, and adaptable recommendation engine, from data preparation to API integration, specifically tailored for the Cairo travel experience.
-
-
-
+- **Objective**: Build a machine learning recommendation system for personalized travel planning in Cairo.
+1. **Data Collection**: 
+  - Scrape data on places, restaurants, hotels, and transportation in Cairo.
+  - Clean and organize data on stay duration, location, price, reviews, and type (family, friends, solo).
+2. **Filtering Preferences**: 
+  - Filter data based on user preferences (type, interests, price).
+  - Rank options by reviews and proximity.
+3. **Model Development**: 
+  - Develop collaborative filtering or content-based recommendation models.
+  - Incorporate budget constraints for recommendations.
+4. **Model Evaluation**: 
+  - Use precision and recall to evaluate model performance.
+  - Optimize for better personalized recommendations.
+5. **API Development**: 
+  - Create API endpoints for real-time integration with the Yalla Bena app.
+  - Support dynamic itinerary suggestions and budget-aware planning.
+This project aims to create a tailored travel experience for users exploring Cairo.
 
 # Tools & Libraries Used
 
@@ -56,33 +39,17 @@ This project focuses on building a reliable, responsive, and adaptable recommend
 3. **Numerical Computing**: [![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)](https://numpy.org/)
 4. **Data Visualization**: [![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat&logo=plotly&logoColor=white)](https://matplotlib.org/) [![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=flat&logo=python&logoColor=white)](https://seaborn.pydata.org/)
 5. **Logging**: [![Logger](https://img.shields.io/badge/Logging-4B8BBE?style=flat&logo=python&logoColor=yellow)](https://docs.python.org/3/howto/logging.html)
-6. **Data Scraping**: 
-- - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/)
-- - [Requests](https://requests.readthedocs.io/en/latest/)
+6. **Data Scraping**: [![Beautiful Soup](https://img.shields.io/badge/Beautiful%20Soup-FFD700?style=flat&logo=python&logoColor=black)](https://www.crummy.com/software/BeautifulSoup/)| [![Requests](https://img.shields.io/badge/Requests-005571?style=flat&logo=python&logoColor=white)](https://requests.readthedocs.io/en/latest/)
 7. **Database**: [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-
-8. **Machine Learning Frameworks**:
-- - [Scikit-learn](https://scikit-learn.org/stable/)
-- - [TensorFlow](https://www.tensorflow.org/) (if using deep learning models)
-
-9. - **Recommendation Algorithms**: 
-  - -  Collaborative Filtering
-  - -  Content-Based Filtering
-
-10.  **Model Evaluation**: 
-  - Precision, Recall, and other metrics for model assessment
-
+8. **Machine Learning Frameworks**:[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/stable/)|[![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/)
+9. **Recommendation Algorithms**: [![Collaborative Filtering](https://img.shields.io/badge/Collaborative%20Filtering-4B0082?style=flat&logo=cloudsmith&logoColor=white)](https://en.wikipedia.org/wiki/Collaborative_filtering)| [![Content-Based Filtering](https://img.shields.io/badge/Content--Based%20Filtering-008080?style=flat&logo=cloudsmith&logoColor=white)](https://en.wikipedia.org/wiki/Content-based_filtering)
+10. **Model Evaluation**: [![Precision](https://img.shields.io/badge/Precision-FF6347?style=flat&logo=chart-line&logoColor=white)](https://en.wikipedia.org/wiki/Precision_and_recall)|[![Recall](https://img.shields.io/badge/Recall-4682B4?style=flat&logo=chart-line&logoColor=white)](https://en.wikipedia.org/wiki/Precision_and_recall)
 11. **Web Framework**: [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-
 12. **Statistical Analysis**: [![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=flat&logo=scipy&logoColor=white)](https://scipy.org/)
-
-13. **Version Control**: 
-- -  [Git](https://git-scm.com/) 
-- -  [GitHub](https://github.com/)
+13. **Version Control**: [![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)](https://git-scm.com/)| [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/)
 14. **Code Formatting & Linting**: [![Black](https://img.shields.io/badge/Black-000000?style=flat&logo=python&logoColor=white)](https://github.com/psf/black)
 15. **Continuous Integration (CI)**: [![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat&logo=github-actions&logoColor=white)](https://github.com/features/actions)
-16. **Environment Management**: 
-- - [pip](https://pip.pypa.io/en/stable/)
+16. **Environment Management**: [![Pip](https://img.shields.io/badge/Pip-005A8B?style=flat&logo=pypi&logoColor=white)](https://pip.pypa.io/en/stable/)
 ## Folder Organization
 
 ```
